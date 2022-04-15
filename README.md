@@ -2,14 +2,16 @@
 
 Base template for SvelteKit tailwind and tabulator
 
-## Developing 
+## Developing
 
 Installed dependencies
+
 ```bash
 npm install
 ```
 
 Local test
+
 ```bash
 npm run dev
 ```
@@ -24,7 +26,6 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
+> tailwind (https://tailwindcss.com/)
 
->  tailwind (https://tailwindcss.com/) 
-
->  tabulator (http://tabulator.info/) 
+> tabulator (http://tabulator.info/)
