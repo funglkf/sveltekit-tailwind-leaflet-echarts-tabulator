@@ -37,6 +37,15 @@
 						todo</a
 					>
 				</li>
+				<li>
+					<a
+						href="/table-template"
+						class={`text-base text-gray-800 hover:text-gray-400 
+											${$page.url.pathname === '/table-template' ? 'underline' : ' '}`}
+					>
+					table-template</a
+					>
+				</li>
 			</ul>
 		</div>
 	</div>

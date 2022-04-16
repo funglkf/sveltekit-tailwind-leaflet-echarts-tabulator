@@ -45,8 +45,8 @@
 	<div class="mx-5">
 		<h1 class="font-semibold text-xl">{title}</h1>
 	</div>
-	<div class="h-no-nav mx-5">
-		<div bind:this={tableDiv} class="h-no-nav" />
+	<div class="h-noHeader-noFooter mx-5">
+		<div bind:this={tableDiv} class="h-noHeader-noFooter" />
 	</div>
 </main>
 
