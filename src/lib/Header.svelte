@@ -7,8 +7,11 @@
 <header>
 	<div class="px-6 py-1">
 		<div class="container mx-auto flex items-center justify-center border-b-2 border-gray-900">
-			<Fa icon={faMagnifyingGlassChart} class="space-x-0" />
-			<a class="font-serif italic font-semibold text-lg mr-4" href="/"> Svelte Web </a>
+			<a class="flex items-center font-serif italic font-semibold text-lg mr-4" href="/">
+				<img class="h-4 w-4 mx-1" src="favicon.svg" alt="Icon" />
+				<!-- <Fa icon={faMagnifyingGlassChart} class="space-x-0" /> -->
+				Svelte Web
+			</a>
 			<ul class="flex items-end space-x-3 scrollmenu overflow-x-auto header-scrollbar">
 				<li>
 					<a
@@ -39,11 +42,11 @@
 				</li>
 				<li>
 					<a
-						href="/table-template"
+						href="/table-template-auto"
 						class={`text-base text-gray-800 hover:text-gray-400 
-											${$page.url.pathname === '/table-template' ? 'underline' : ' '}`}
+											${$page.url.pathname === '/table-template-auto' ? 'underline' : ' '}`}
 					>
-					table-template</a
+						table-template</a
 					>
 				</li>
 			</ul>
