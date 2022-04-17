@@ -36,12 +36,6 @@
 			// destroy: () => alert('bye bye table :\'(')
 		};
 	}
-
-	let selected;
-
-	function changetable() {
-		tableDataUrl = 'https://jsonplaceholder.typicode.com/albums/1/photos';
-	}
 </script>
 
 <div class="mx-5">
@@ -54,9 +48,7 @@
 			<option value={url}>{name}</option>
 		{/each}
 	</select>
-	<button class="bg-blue-500 hover:bg-blue-700 text-white px-1 rounded" on:click={changetable}
-		>ChangeTable
-	</button>
+
 	{#if copyData}
 		<button
 			class="bg-blue-500 hover:bg-blue-700 text-white px-1 rounded"
@@ -64,6 +56,7 @@
 			>Copy data
 		</button>
 	{/if}
+
 	{#if saveCSV}
 		<button
 			class="bg-green-500 hover:bg-green-700 text-white px-1 rounded"
@@ -71,6 +64,7 @@
 			>Download CSV
 		</button>
 	{/if}
+
 	{#if saveExcel}
 		<button
 			class="bg-green-500 hover:bg-green-700 text-white px-1 rounded"
@@ -78,5 +72,6 @@
 			>Download Excel
 		</button>
 	{/if}
+
 	<div class="h-noHeader-noFooter-noButton" use:tableAction={{ ajaxurl: tableDataUrl }} />
 </div>
