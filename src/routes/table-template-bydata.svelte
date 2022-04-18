@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import TableAuto from '$lib/TabulatorAuto.svelte';
+	import TableAuto from '$lib/TabulatorByData.svelte';
 
 	let title = 'I am Name';
 

@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.h-noHeader-noFooter{
-	height: calc(100vh - 100px);
+.h-noHeader-noFooter {
+	height: calc(100vh - 75px);
 }
 
-.h-noHeader-noFooter-noButton{
-	height: calc(100vh - 125px);
+.h-noHeader-noFooter-noButton {
+	height: calc(100vh - 135px);
 }

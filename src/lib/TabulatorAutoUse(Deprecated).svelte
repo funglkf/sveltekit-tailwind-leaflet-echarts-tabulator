@@ -3,6 +3,8 @@
 	import 'tabulator-tables/dist/css/tabulator_simple.min.css';
 	import '$lib/xlsx.full.min.js';
 
+	export let title = 'Table View';
+
 	export let tableDataUrl;
 
 	export let tableList = [];
@@ -11,23 +13,28 @@
 	export let saveExcel = true;
 	export let saveCSV = true;
 
+	export let customTableConfig = {};
+
 	let table;
 
 	function tableAction(node, { ajaxurl }) {
 		table = new Tabulator(node, {
-			ajaxURL: ajaxurl,
-			autoColumns: true,
-			autoColumnsDefinitions: function (definitions) {
-				definitions.forEach((column) => {
-					column.headerFilter = true; // add header filter to every column
-				});
-				return definitions;
+			...{
+				ajaxURL: ajaxurl,
+				autoColumns: true,
+				autoColumnsDefinitions: function (definitions) {
+					definitions.forEach((column) => {
+						column.headerFilter = true; // add header filter to every column
+					});
+					return definitions;
+				},
+				// columns: columns,
+				layout: 'fitDataStretch',
+				pagination: true,
+				paginationSize: 100,
+				clipboard: true
 			},
-			// columns: columns,
-			layout: 'fitColumns',
-			pagination: true,
-			paginationSize: 100,
-			clipboard: true
+			...customTableConfig
 		});
 		return {
 			update: ({ ajaxurl }) => {
@@ -39,15 +46,20 @@
 </script>
 
 <div class="mx-5">
-	<select
-		class="border border-solid border-gray-300 mx-1 rounded text-base"
-		bind:value={tableDataUrl}
-	>
-		<option selected disabled>Select Table</option>
-		{#each tableList as { name, url }}
-			<option value={url}>{name}</option>
-		{/each}
-	</select>
+	<div>
+		<h1 class="font-semibold text-xl">{title}</h1>
+	</div>
+	{#if !(tableList.length < 2)}
+		<select
+			class="border border-solid border-gray-300 mx-1 rounded text-base"
+			bind:value={tableDataUrl}
+		>
+			<option selected disabled>Select Table</option>
+			{#each tableList as { name, url }}
+				<option value={url}>{name}</option>
+			{/each}
+		</select>
+	{/if}
 
 	{#if copyData}
 		<button

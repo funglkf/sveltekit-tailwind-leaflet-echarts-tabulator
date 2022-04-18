@@ -1,6 +1,5 @@
 <script>
-	import { onMount } from 'svelte';
-	import TableAuto from '$lib/TabulatorAuto.svelte';
+	import TableAuto from '$lib/TabulatorAutoMount.svelte';
 
 	let title = 'I am Name';
 
@@ -22,11 +21,12 @@
 			url: 'https://jsonplaceholder.typicode.com/albums/1/photos'
 		}
 	];
+
+	let customTableConfig = {
+		paginationSize: 10
+	};
 </script>
 
 <main>
-	<div class="mx-5">
-		<h1 class="font-semibold text-xl">{title}</h1>
-	</div>
-	<TableAuto {tableDataUrl} {...tablePluginSettings} {tableList} />
+	<TableAuto {tableDataUrl} {...tablePluginSettings} {tableList} {customTableConfig} />
 </main>
