@@ -1,5 +1,5 @@
 <script>
-	import TableAuto from '$lib/TabulatorAutoMount.svelte';
+	import TableAuto from '$lib/TabulatorAutoUse.svelte';
 
 	let title = 'I am Name';
 
