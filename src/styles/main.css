@@ -9,6 +9,9 @@
 .h-noHeader-noFooter-noButton {
 	height: calc(100vh - 135px);
 }
+.h-noHeader-noFooter-noTitle {
+	height: calc(100vh - 100px);
+}
 
 .tabulator-header-filter {
 	border-width: 1px;
