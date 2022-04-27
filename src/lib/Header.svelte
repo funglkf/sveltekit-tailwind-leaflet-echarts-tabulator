@@ -24,20 +24,29 @@
 				</li>
 				<li>
 					<a
-						href="/about"
-						class={`text-base text-gray-800 hover:text-gray-400 
-											${$page.url.pathname === '/about' ? 'underline' : ' '}`}
+						href="/map"
+						class={`text-base text-gray-800 hover:text-gray-400  
+											${$page.url.pathname === '/map' ? 'underline' : ' '}`}
 					>
-						About</a
+						Map</a
 					>
 				</li>
-				<li class:active={$page.url.pathname === '/todo'}>
+				<li>
 					<a
-						href="/todo"
+						href="/echart"
 						class={`text-base text-gray-800 hover:text-gray-400 
-											${$page.url.pathname === '/todo' ? 'underline' : ' '}`}
+											${$page.url.pathname === '/echart' ? 'underline' : ' '}`}
 					>
-						todo</a
+						Echart</a
+					>
+				</li>
+				<li class:active={$page.url.pathname === '/table'}>
+					<a
+						href="/table"
+						class={`text-base text-gray-800 hover:text-gray-400 
+											${$page.url.pathname === '/tabble' ? 'underline' : ' '}`}
+					>
+						Table</a
 					>
 				</li>
 				<li>
@@ -46,7 +55,7 @@
 						class={`text-base text-gray-800 hover:text-gray-400 
 											${$page.url.pathname === '/table-template-auto' ? 'underline' : ' '}`}
 					>
-						table-template</a
+						table-custom</a
 					>
 				</li>
 			</ul>
