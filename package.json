@@ -29,6 +29,7 @@
 	"dependencies": {
 		"@fortawesome/free-solid-svg-icons": "^6.1.1",
 		"echarts": "^5.3.2",
+		"leaflet": "^1.8.0",
 		"svelte-fa": "^2.4.0",
 		"tabulator-tables": "^5.1.8",
 		"xlsx": "^0.18.5"
