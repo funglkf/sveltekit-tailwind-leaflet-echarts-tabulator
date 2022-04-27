@@ -1,6 +1,4 @@
-# SvelteKit with tailwind and tabulator
-
-Base template for SvelteKit tailwind and tabulator
+# SvelteKit with tailwind, leaflet, echarts and tabulator
 
 ## Developing
 
