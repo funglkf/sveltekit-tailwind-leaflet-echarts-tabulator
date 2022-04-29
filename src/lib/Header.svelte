@@ -2,6 +2,14 @@
 	import { page } from '$app/stores';
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faFlag, faMagnifyingGlassChart } from '@fortawesome/free-solid-svg-icons';
+
+	const headerList = [
+		{ href: '/', name: 'Leaflet' },
+		{ href: '/echarts', name: 'Echarts' },
+		{ href: '/echartsmap', name: 'EchartsMap' },
+		{ href: '/tabulator', name: 'Tabulator' },
+		{ href: '/tabulator-custom', name: 'Tabulator-custom' }
+	];
 </script>
 
 <header>
@@ -13,51 +21,17 @@
 				Svelte Web
 			</a>
 			<ul class="flex items-end space-x-3 scrollmenu overflow-x-auto header-scrollbar">
-				<li>
-					<a
-						href="/"
-						class={`text-base text-gray-800 hover:text-gray-400  
-											${$page.url.pathname === '/' ? 'underline' : ' '}`}
-					>
-						Home</a
-					>
-				</li>
-				<li>
-					<a
-						href="/map"
-						class={`text-base text-gray-800 hover:text-gray-400  
-											${$page.url.pathname === '/map' ? 'underline' : ' '}`}
-					>
-						Map</a
-					>
-				</li>
-				<li>
-					<a
-						href="/echart"
-						class={`text-base text-gray-800 hover:text-gray-400 
-											${$page.url.pathname === '/echart' ? 'underline' : ' '}`}
-					>
-						Echart</a
-					>
-				</li>
-				<li class:active={$page.url.pathname === '/table'}>
-					<a
-						href="/table"
-						class={`text-base text-gray-800 hover:text-gray-400 
-											${$page.url.pathname === '/tabble' ? 'underline' : ' '}`}
-					>
-						Table</a
-					>
-				</li>
-				<li>
-					<a
-						href="/table-template-auto"
-						class={`text-base text-gray-800 hover:text-gray-400 
-											${$page.url.pathname === '/table-template-auto' ? 'underline' : ' '}`}
-					>
-						table-custom</a
-					>
-				</li>
+				{#each headerList as item}
+					<li>
+						<a
+							href={item.href}
+							class={`text-base text-gray-500 hover:text-gray-400  
+											${$page.url.pathname === item.href ? 'underline' : ' '}`}
+						>
+							{item.name}</a
+						>
+					</li>
+				{/each}
 			</ul>
 		</div>
 	</div>
