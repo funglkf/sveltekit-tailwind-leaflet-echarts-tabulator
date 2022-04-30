@@ -1,7 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import Fa from 'svelte-fa/src/fa.svelte';
-	import { faFlag, faMagnifyingGlassChart } from '@fortawesome/free-solid-svg-icons';
 
 	const headerList = [
 		{ href: '/', name: 'Leaflet' },
