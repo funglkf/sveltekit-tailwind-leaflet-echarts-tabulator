@@ -1,8 +1,10 @@
 # SvelteKit with tailwind, leaflet, echarts and tabulator
 
+[Demo](https://sveltekit-tailwind-leaflet-echarts-tabulator.netlify.app/)
+
 ## Developing
 
-Installed dependencies
+Install dependencies
 
 ```bash
 npm install
@@ -24,6 +26,19 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> tailwind (https://tailwindcss.com/)
+# Library
 
-> tabulator (http://tabulator.info/)
+Adding libraries to SvelteKit project
+
+> tailwind (https://tailwindcss.com/docs/guides/sveltekit)
+
+> Leaflet (https://dev.to/khromov/using-leaflet-with-sveltekit-3jn1)
+
+> Echarts (https://echarts.apache.org/handbook/en/basics/import)
+
+> tabulator (http://tabulator.info/docs/5.2/frameworks)
+>
+> ```js
+> import { TabulatorFull as Tabulator } from 'tabulator-tables';
+> import 'tabulator-tables/dist/css/tabulator_simple.min.css';
+> ```
